@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%; /* Ajustement de la largeur à 100% */
+    margin: 0; /* Correction de la marge */
+    min-height: 100vh;
+    background: linear-gradient(135deg,#153677, #4e085f); /* background = fond d'écran >>> linear-gradient = création du dégradé entre les deux couleur à 135 degrés.*/
+    padding: 10px;
+}
+
+.todo-List {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-List h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styliser le background de l'input "Add your text"*/
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Styliser l'input "Add your text"*/
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+/* Styliser le boutton "Add"*/
+#btnAdd {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+#bin {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-image: url(/images/bin.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    right: 20px;
+    cursor: pointer;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(/images/checked.png);
+}
+
